@@ -47,7 +47,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
-          files: release74/linux-unpacked/**/*
+          files: release74/*.AppImage,release74/*.tar.gz,release74/*.deb
           draft: false
           prerelease: false
         env:
