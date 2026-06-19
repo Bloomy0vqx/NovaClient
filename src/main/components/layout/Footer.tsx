@@ -5,7 +5,7 @@ export default function Footer() {
   const { t } = useLanguage()
   const links = [
     { icon: 'fa-brands fa-github', url: 'https://github.com/Bloomy0vqx/NovaClient' },
-    { icon: 'fa-brands fa-youtube', url: 'https://youtube.com/@officialnovaclient' },
+    { icon: 'fa-brands fa-youtube', url: 'https://youtube.com/@WildspireStudios' },
     { icon: 'fa-brands fa-discord', url: 'https://discord.gg/yEwyZjzRKH' }
   ]
 
