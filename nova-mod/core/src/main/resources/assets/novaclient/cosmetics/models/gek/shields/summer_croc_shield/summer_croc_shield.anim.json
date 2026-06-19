@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"gui": {
+			"loop": true,
+			"bones": {
+				"shield": {
+					"rotation": {
+						"vector": [-22.5, -110, 15]
+					},
+					"position": {
+						"vector": [7, 1, 0]
+					},
+					"scale": {
+						"vector": [0.85, 0.85, 0.85]
+					}
+				}
+			}
+		},
+		"main": {
+			"loop": true
+		}
+	},
+	"geckolib_format_version": 2
+}

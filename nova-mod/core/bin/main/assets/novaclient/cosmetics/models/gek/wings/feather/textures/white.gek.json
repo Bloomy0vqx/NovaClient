@@ -1,0 +1,23 @@
+{
+  "type": "pet",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/wings/simple_2d_wings.geo.json",
+  "texture": "lunar:cosmetics/models/gek/wings/feather/textures/white.webp",
+  "animation": "lunar:cosmetics/models/gek/wings/simple_2d_wings.anim.json",
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "15",
+        "states": [
+          {
+            "anim": "main",
+            "plays_when": "1",
+            "transition_easing": "easeOutSine"
+          }
+        ]
+      }
+    ]
+  }
+}

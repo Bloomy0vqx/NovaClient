@@ -1,0 +1,39 @@
+{
+  "type": "pet",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/wings/skeleton/skeleton.geo.json",
+  "texture": "lunar:cosmetics/models/gek/wings/skeleton/skeleton.webp",
+  "animation": "lunar:cosmetics/models/gek/wings/skeleton/skeleton.anim.json",
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "molang_controller",
+        "default_transition_ticks": "0",
+        "states": [
+          {
+            "anim": "molang_controller",
+            "plays_when": "1",
+            "transition_easing": "easeInOutSine"
+          }
+        ]
+      },
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "10",
+        "states": [
+          {
+            "anim": "elytra",
+            "plays_when": "q.is_elytra_flying",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "main",
+            "plays_when": "1",
+            "transition_easing": "easeInOutSine"
+          }
+        ]
+      }
+    ]
+  }
+}

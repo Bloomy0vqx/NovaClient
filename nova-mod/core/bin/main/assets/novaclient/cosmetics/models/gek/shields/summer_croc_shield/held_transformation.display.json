@@ -1,0 +1,22 @@
+{
+  "parent": "builtin/entity",
+  "texture_size": [
+    64,
+    64
+  ],
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [90, -4, -90],
+      "translation": [-13, 2.7, 9.5],
+      "scale": [0.66, 0.66, 0.66]
+    },
+    "firstperson_lefthand": {
+      "rotation": [90, -4, 90],
+      "translation": [7.2, 1.25, 9.5],
+      "scale": [0.66, 0.66, 0.66]
+    }
+  },
+  "textures": {
+    "particle": "item/purple_dog_shield"
+  }
+}

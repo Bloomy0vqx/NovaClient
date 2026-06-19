@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
+  --bg-primary: #12121F;
+  --bg-titlebar: #0e0e1a;
+  --bg-fixed: #161628;
+  --bg-footer: #0e0e1a;
+  --bg-card: #1a1a2e;
+  --bg-carditem: #161628;
+  --bg-patcher: #1c1c30;
+  --text-primary: #f7f7f7;
+  --text-secondary: #9090a8;
+  --accent-green: #3cc065;
+  --accent-green-hover: #48d575;
+  --accent-purple: #8B5CF6;
+  --accent-blue: #8B5CF6;
+  --accent-blue-hover: #7C3AED;
+  --accent-red: #e04060;
+  --accent-red-hover: #c43058;
+  --border-color: #252540;
+  --border-card: #25254060;
+}
+
+html {
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Smooth input fields */
+.input-field {
+  background: #161628;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 6px;
+  color: var(--text-primary);
+  border-radius: 5px;
+  caret-color: var(--text-primary);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.input-field:hover {
+  background: #1c1c30;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.15);
+  background: #1e1e32;
+}
+
+/* Smooth buttons */
+.btn-blue {
+  background: var(--accent-blue);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  transform: translateY(0);
+}
+
+.btn-blue:hover {
+  background: var(--accent-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.btn-blue:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-blue:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Background pan animation */
+@keyframes novaBgPan {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate(-2%, -1%);
+  }
+}
+
+/* PlayBar background */
+@keyframes orbitBgPan {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.05) translate(-1%, -0.5%);
+  }
+}
+
+/* Smooth page fade in */
+@keyframes pageIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: pageIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Smooth glow pulse for launch button */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(139, 92, 246, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.35); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Smooth shimmer for loading */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Smooth spin */
+@keyframes smoothSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Smooth scrollbar for internal scrollable areas */
+.smooth-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #252540 transparent;
+  scroll-behavior: smooth;
+}
+
+.smooth-scroll::-webkit-scrollbar {
+  display: block;
+  width: 4px;
+}
+
+.smooth-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.smooth-scroll::-webkit-scrollbar-thumb {
+  background: #252540;
+  border-radius: 2px;
+}
+
+.smooth-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8B5CF6;
+}
+
+/* Global smooth transitions for common elements */
+button, a, [role="button"] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover lift effect */
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle glow on focus */
+:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+}

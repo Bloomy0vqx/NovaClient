@@ -1,0 +1,39 @@
+{
+  "type": "pet",
+  "special_cosmetic_type": "minime",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/pets/general/mini_me/mini_me.geo.json",
+  "texture": "lunar:cosmetics/models/gek/pets/general/mini_me/mini_me.webp",
+  "animation": "lunar:cosmetics/models/gek/pets/general/mini_me/mini_me.anim.json",
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "15",
+        "states": [
+          {
+            "anim": "animation.idle",
+            "plays_when": "!query.is_flying && !query.is_in_water && !query.is_elytra_flying",
+            "transition_easing": "easeOutSine"
+          },
+          {
+            "anim": "animation.flight",
+            "plays_when": "query.is_flying && !query.is_elytra_flying ",
+            "transition_easing": "easeOutExpo"
+          },
+          {
+            "anim": "animation.in_water",
+            "plays_when": "query.is_in_water && !query.is_flying",
+            "transition_easing": "easeOutSine"
+          },
+          {
+            "anim": "animation.elytra_flying",
+            "plays_when": "query.is_elytra_flying",
+            "transition_easing": "easeOutSine"
+          }
+        ]
+      }
+    ]
+  }
+}

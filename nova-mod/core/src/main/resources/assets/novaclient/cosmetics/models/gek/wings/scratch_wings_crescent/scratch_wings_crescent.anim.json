@@ -1,0 +1,112 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"bones": {
+				"left": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(q.life_time * 90) * 22.5 + 12.25"]
+					}
+				},
+				"middle_left": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time * 90) * 12.25", 0, "-math.cos(q.life_time * 90) * 12.25 + 12.25"]
+					}
+				},
+				"top_left": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time * 90) * 12.25", 0, 0]
+					}
+				},
+				"right": {
+					"rotation": {
+						"vector": [0, 0, "-math.sin(q.life_time * 90) * 22.5 - 12.25"]
+					}
+				},
+				"middle_right": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time * 90) * 12.25", 0, "math.cos(q.life_time * 90) * 12.25 - 12.25"]
+					}
+				},
+				"top_right": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time * 90) * 12.25", 0, 0]
+					}
+				},
+				"n": {
+					"position": {
+						"vector": [0, "-math.sin(q.life_time * 90)", 0]
+					}
+				},
+				"moon": {
+					"position": {
+						"vector": [0, "-math.sin(q.life_time * 90) * 2", 0]
+					}
+				}
+			}
+		},
+		"moving": {
+			"loop": true,
+			"bones": {
+				"left": {
+					"rotation": {
+						"vector": [
+							0,
+							"math.cos(  q.life_time * 180 - 45  + c.distance_moved * 45) * 30 - 22.5",
+							"math.cos(  q.life_time * 180  + c.distance_moved * 45) * 22.5 + 22.5"
+						]
+					}
+				},
+				"middle_left": {
+					"rotation": {
+						"vector": ["math.cos(  q.life_time * 180  + c.distance_moved * 45) * 12.25", 0, "-math.cos(  q.life_time * 180  + c.distance_moved * 45) * 12.25"]
+					}
+				},
+				"top_left": {
+					"rotation": {
+						"vector": [
+							"-math.cos(  q.life_time * 180 + 45  + c.distance_moved * 45) * 22.5 - 12.25",
+							"-math.cos(  q.life_time * 180 + 45  + c.distance_moved * 45) * 12.25",
+							0
+						]
+					}
+				},
+				"right": {
+					"rotation": {
+						"vector": [
+							0,
+							"-math.cos(  q.life_time * 180 - 45  + c.distance_moved * 45) * 30 + 22.5",
+							"-math.cos(  q.life_time * 180  + c.distance_moved * 45) * 22.5 - 22.5"
+						]
+					}
+				},
+				"middle_right": {
+					"rotation": {
+						"vector": ["math.cos(  q.life_time * 180  + c.distance_moved * 45) * 12.25", 0, "math.cos(  q.life_time * 180  + c.distance_moved * 45) * 12.25"]
+					}
+				},
+				"top_right": {
+					"rotation": {
+						"vector": [
+							"-math.cos(  q.life_time * 180 + 45  + c.distance_moved * 45) * 22.5 - 12.25",
+							"math.cos(  q.life_time * 180 + 45  + c.distance_moved * 45) * 12.25",
+							0
+						]
+					}
+				},
+				"n": {
+					"position": {
+						"vector": [0, "-math.cos(  q.life_time * 180 - 45  + c.distance_moved * 45)", 0]
+					}
+				},
+				"moon": {
+					"position": {
+						"vector": [0, "math.sin(  q.life_time * 180 - 45  + c.distance_moved * 45) * 2 + 4", -2]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

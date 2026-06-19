@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "novaclient-core",
+  "version": "1.0.0",
+  "name": "Nova Client Core",
+  "description": "Core library for Nova Client mod.",
+  "authors": ["Nova Team"],
+  "environment": "*",
+  "depends": {
+    "java": ">=21"
+  }
+}

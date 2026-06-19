@@ -1,0 +1,84 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"bones": {
+				"left": {
+					"rotation": {
+						"vector": [0, "-45+ math.sin(q.life_time * 90) * 22.5", -12.25]
+					}
+				},
+				"tip_left": {
+					"rotation": {
+						"vector": ["-math.cos(q.life_time * 90) * 12.25", "-math.cos(q.life_time * 90) * 12.25", 0]
+					}
+				},
+				"lower_left": {
+					"rotation": {
+						"vector": [0, "-12.25-math.cos(q.life_time * 90) * 12.25", 0]
+					}
+				},
+				"right": {
+					"rotation": {
+						"vector": [0, "45- math.sin(q.life_time * 90) * 22.5", 12.25]
+					}
+				},
+				"tip_right": {
+					"rotation": {
+						"vector": ["-math.cos(q.life_time * 90) * 12.25", "math.cos(q.life_time * 90) * 12.25", 0]
+					}
+				},
+				"lower_right": {
+					"rotation": {
+						"vector": [0, "12.25+math.cos(q.life_time * 90) * 12.25", 0]
+					}
+				}
+			}
+		},
+		"moving": {
+			"loop": true,
+			"bones": {
+				"left": {
+					"rotation": {
+						"vector": [
+							0,
+							"-45+ math.sin(  q.life_time * 360  + c.distance_moved * 45) * 30",
+							"-12.25-math.sin(  q.life_time * 360 + 45  + c.distance_moved * 45) * 12.25"
+						]
+					}
+				},
+				"tip_left": {
+					"rotation": {
+						"vector": ["-math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", "-math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", 0]
+					}
+				},
+				"lower_left": {
+					"rotation": {
+						"vector": ["math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", "-20-math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", 0]
+					}
+				},
+				"right": {
+					"rotation": {
+						"vector": [
+							0,
+							"45- math.sin(  q.life_time * 360  + c.distance_moved * 45) * 30",
+							"12.25+ math.sin(  q.life_time * 360 + 45  + c.distance_moved * 45) * 12.25"
+						]
+					}
+				},
+				"tip_right": {
+					"rotation": {
+						"vector": ["-math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", "math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", 0]
+					}
+				},
+				"lower_right": {
+					"rotation": {
+						"vector": ["math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", "20+ math.cos(  q.life_time * 360  + c.distance_moved * 45) * 20", 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

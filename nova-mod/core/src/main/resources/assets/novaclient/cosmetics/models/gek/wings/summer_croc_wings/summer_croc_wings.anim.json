@@ -1,0 +1,117 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"bones": {
+				"wings": {
+					"position": {
+						"vector": [0, 0, "math.cos(q.life_time *150) *0.25"]
+					}
+				},
+				"leftWing": {
+					"rotation": {
+						"vector": ["-math.sin(q.life_time *150) *3", "math.sin(q.life_time *150) *3-1.5", 0]
+					}
+				},
+				"leftWingEndAnimator": {
+					"rotation": {
+						"vector": [0, "-math.cos(q.life_time *150) *15+15", 0]
+					}
+				},
+				"rightWing": {
+					"rotation": {
+						"vector": ["-math.sin(q.life_time *150) *3", "-math.sin(q.life_time *150) *3-1.5", 0]
+					}
+				},
+				"rightWingEndAnimator": {
+					"rotation": {
+						"vector": [0, "math.cos(q.life_time *150) *15-15", 0]
+					}
+				}
+			}
+		},
+		"moving": {
+			"loop": true,
+			"bones": {
+				"wings": {
+					"position": {
+						"vector": [0, "math.cos(q.life_time *150) *0.25", 0]
+					}
+				},
+				"leftWing": {
+					"rotation": {
+						"vector": ["-math.sin(q.life_time *150) *3", "math.cos(q.life_time * 250) * 30-10", 0]
+					}
+				},
+				"leftWingEndAnimator": {
+					"rotation": {
+						"vector": [0, "math.sin(q.life_time * 250) * 45+15", 0]
+					}
+				},
+				"rightWing": {
+					"rotation": {
+						"vector": ["-math.sin(q.life_time *150) *3", "-math.cos(q.life_time * 250)* 30+10", 0]
+					}
+				},
+				"rightWingEndAnimator": {
+					"rotation": {
+						"vector": [0, "-math.sin(q.life_time * 250) * 45-15", 0]
+					}
+				}
+			}
+		},
+		"flying": {
+			"loop": true,
+			"bones": {
+				"wings": {
+					"position": {
+						"vector": [0, "math.cos(q.life_time *150) *0.25", 0]
+					}
+				},
+				"wing_rotation": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				},
+				"leftWing": {
+					"rotation": {
+						"vector": ["-math.sin(q.life_time *150) *3", "math.cos(q.life_time * 250) * 30-10", 0]
+					}
+				},
+				"leftWingEndAnimator": {
+					"rotation": {
+						"vector": [0, "math.sin(q.life_time * 250) * 45+15", 0]
+					}
+				},
+				"rightWing": {
+					"rotation": {
+						"vector": ["-math.sin(q.life_time *150) *3", "-math.cos(q.life_time * 250)* 30+10", 0]
+					}
+				},
+				"rightWingEndAnimator": {
+					"rotation": {
+						"vector": [0, "-math.sin(q.life_time * 250) * 45-15", 0]
+					}
+				}
+			}
+		},
+		"gui": {
+			"loop": true,
+			"bones": {
+				"wings": {
+					"rotation": {
+						"vector": [0, -22.5, 0]
+					},
+					"position": {
+						"vector": [8, 7, 0]
+					},
+					"scale": {
+						"vector": [0.45, 0.45, 0.45]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

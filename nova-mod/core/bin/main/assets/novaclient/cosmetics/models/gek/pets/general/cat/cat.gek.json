@@ -1,0 +1,109 @@
+{
+  "type": "pet",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/pets/general/cat/cat.geo.json",
+  "texture": "lunar:cosmetics/models/gek/pets/general/cat/cat.webp",
+  "animation": "lunar:cosmetics/models/gek/pets/general/cat/cat.anim.json",
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "snout_controller",
+        "default_transition_ticks": "10",
+        "states": [
+          {
+            "anim": "snout_anim",
+            "plays_when": "1",
+            "transition_easing": "easeOutSine"
+          }
+        ]
+      },
+      {
+        "name": "vibriss_controller",
+        "default_transition_ticks": "10",
+        "states": [
+          {
+            "anim": "vibriss_anim",
+            "plays_when": "1",
+            "transition_easing": "easeOutSine"
+          }
+        ]
+      },
+      {
+        "name": "eyes_controller",
+        "default_transition_ticks": "10",
+        "states": [
+          {
+            "anim": "eyes_idle",
+            "plays_when": "(c.afk_timer <= 8)",
+            "transition_easing": "easeOutSine"
+          }
+        ]
+      },
+      {
+        "name": "scale_controller",
+        "default_transition_ticks": "10",
+        "states": [
+          {
+            "anim": "scale_modifiers",
+            "plays_when": "1",
+            "transition_easing": "easeOutSine"
+          }
+        ]
+      },
+      {
+        "name": "ears_controller",
+        "default_transition_ticks": "10",
+        "states": [
+          {
+            "anim": "ears_idle",
+            "plays_when": "1",
+            "transition_easing": "easeInOutSine"
+          }
+        ]
+      },
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "10",
+        "states": [
+          {
+            "anim": "air",
+            "plays_when": "!q.is_on_ground && !q.is_flying && c.local_y_velocity_smoothed!=0 && !q.is_in_water",
+            "transition_ticks": "0"
+          },
+          {
+            "anim": "licking_paw",
+            "plays_when": "!c.in_special_env && (c.afk_timer > 2 && c.afk_timer < 8)",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "yawn_sleep",
+            "plays_when": "!c.in_special_env && !(c.afk_timer <= 8)",
+            "transition_ticks": "0"
+          },
+          {
+            "anim": "idle",
+            "plays_when": "!c.in_special_env && (c.afk_timer<=2) && q.is_on_ground",
+            "transition_easing": "easeOutSine",
+            "transition_ticks": "10"
+          },
+          {
+            "anim": "in_water_surface",
+            "plays_when": "q.distance_from_surface<=3 && q.is_in_water && !q.surface_blocked && !q.is_swimming",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "in_water_deep",
+            "plays_when": "(q.distance_from_surface>3 || q.distance_from_surface<=3 && (q.surface_blocked || q.is_swimming)) && q.is_in_water ",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "flying",
+            "plays_when": "q.is_flying && !q.is_in_water",
+            "transition_easing": "easeInOutSine"
+          }
+        ]
+      }
+    ]
+  }
+}

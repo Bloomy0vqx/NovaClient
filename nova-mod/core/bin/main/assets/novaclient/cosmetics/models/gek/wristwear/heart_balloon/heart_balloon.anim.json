@@ -1,0 +1,116 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"main": {
+			"loop": true,
+			"bones": {
+				"heart_balloon": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time*150)*1", -0.00002, "math.cos(90+q.life_time*150)*1"]
+					}
+				},
+				"string1": {
+					"rotation": {
+						"vector": ["math.cos(-60+q.life_time*150)*5+ math.clamp(c.local_z_velocity_smoothed*-2,-30,30)", 0, "math.cos(-60+90+q.life_time*150) *2"]
+					}
+				},
+				"string2": {
+					"rotation": {
+						"vector": ["math.cos(-120+q.life_time*150)*5+ math.clamp(c.local_z_velocity_smoothed*-2,-30,30)", 0, "math.cos(-120+90+q.life_time*150)*2"]
+					}
+				},
+				"heart": {
+					"rotation": {
+						"vector": ["math.cos(-180+q.life_time*150)*5+ math.clamp(c.local_z_velocity_smoothed*-4,-30,30)", 0, "math.cos(-180+90+q.life_time*150)*2"]
+					},
+					"scale": {
+						"vector": ["1+math.cos(q.life_time*100)*0.05", "1+math.cos(q.life_time*100)*0.05", "1+math.cos(q.life_time*100)*0.05"]
+					}
+				},
+				"knot": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time*150)*5", 0, "math.cos(120+q.life_time*150)*5"]
+					}
+				}
+			}
+		},
+		"horizontal": {
+			"loop": true,
+			"bones": {
+				"heart_balloon": {
+					"rotation": {
+						"vector": ["-5+math.cos(q.life_time*300)*1", 0, "math.cos(90+q.life_time*300)*1"]
+					},
+					"scale": {
+						"vector": [1, -1, 1]
+					}
+				},
+				"string1": {
+					"rotation": {
+						"vector": ["math.cos(-60+q.life_time*300)*5", 0, "math.cos(-60+90+q.life_time*300)*2"]
+					}
+				},
+				"string2": {
+					"rotation": {
+						"vector": ["math.cos(-120+q.life_time*300)*5", 0, "math.cos(-120+90+q.life_time*300)*2"]
+					}
+				},
+				"heart": {
+					"rotation": {
+						"vector": ["math.cos(-180+q.life_time*300)*5", 0, "math.cos(-180+90+q.life_time*300)*2"]
+					},
+					"scale": {
+						"vector": ["1+math.cos(q.life_time*100)*0.05", "1+math.cos(q.life_time*100)*0.05", "1+math.cos(q.life_time*100)*0.05"]
+					}
+				},
+				"knot": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time*300)*5", 0, "math.cos(120+q.life_time*300)*5"]
+					}
+				}
+			}
+		},
+		"gui": {
+			"loop": true,
+			"bones": {
+				"heart_balloon": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time*150)*1", 0, "math.cos(90+q.life_time*150)*1"]
+					}
+				},
+				"string1": {
+					"rotation": {
+						"vector": ["math.cos(-60+q.life_time*150)*5+ math.clamp(c.local_z_velocity_smoothed*-4,-30,30)", 0, "math.cos(-60+90+q.life_time*150)*2"]
+					}
+				},
+				"string2": {
+					"rotation": {
+						"vector": ["math.cos(-120+q.life_time*150)*5+ math.clamp(c.local_z_velocity_smoothed*-4,-30,30)", 0, "math.cos(-120+90+q.life_time*150)*2"]
+					}
+				},
+				"heart": {
+					"rotation": {
+						"vector": ["math.cos(-180+q.life_time*150)*5+ math.clamp(c.local_z_velocity_smoothed*-4,-30,30)", 0, "math.cos(-180+90+q.life_time*150)*2"]
+					},
+					"scale": {
+						"vector": ["1+math.cos(q.life_time*100)*0.05", "1+math.cos(q.life_time*100)*0.05", "1+math.cos(q.life_time*100)*0.05"]
+					}
+				},
+				"knot": {
+					"rotation": {
+						"vector": ["math.cos(q.life_time*150)*5", 0, "math.cos(120+q.life_time*150)*5"]
+					}
+				},
+				"base": {
+					"position": {
+						"vector": [-8.75, 16.75, 0]
+					},
+					"scale": {
+						"vector": [0.4, 0.4, 0.4]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

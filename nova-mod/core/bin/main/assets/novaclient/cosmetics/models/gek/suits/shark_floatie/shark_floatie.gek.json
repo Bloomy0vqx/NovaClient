@@ -1,0 +1,14 @@
+{
+  "type": "suits",
+  "attached_bone": "NONE",
+  "show_during_emote": false,
+  "model": "lunar:cosmetics/models/gek/suits/shark_floatie/shark_floatie.geo.json",
+  "texture": "lunar:cosmetics/models/gek/suits/shark_floatie/shark_floatie.webp",
+  "animation": "lunar:cosmetics/models/gek/suits/shark_floatie/shark_floatie.anim.json",
+  "compat": "suits_use_other",
+  "state_machine": {
+    "name": "single",
+    "transition_tick_length": 10,
+    "anim": "main"
+  }
+}

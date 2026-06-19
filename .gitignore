@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-electron/
+release*/
+build/
+
+# Logs
+logs/
+*.log
+
+# Gradle
+.gradle/
+**/.gradle/
+**/build/
+
+# IntelliJ
+.idea/
+
+# VS Code
+.vscode/

@@ -1,0 +1,203 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"molang_controller": {
+			"loop": true,
+			"bones": {
+				"molang_controller": {
+					"rotation": {
+						"vector": [
+							"v.wing_y_jerk = math.lerp(v.lvs_y1, v.lvs_y0, v.tick_delta) * 1- math.lerp(v.lvs_y3, v.lvs_y2, v.tick_delta) * 0.5+ math.lerp(v.lvs_y3, v.lvs_y2, v.tick_delta) * 1;v.wing_mid_y_jerk = math.lerp(v.lvs_y2, v.lvs_y1, v.tick_delta) * 2- math.lerp(v.lvs_y5, v.lvs_y4, v.tick_delta) * 1;v.wing_tip_y_jerk = math.lerp(v.lvs_y3, v.lvs_y2, v.tick_delta) * 2- math.lerp(v.lvs_y6, v.lvs_y5, v.tick_delta) * 1- math.lerp(v.lvs_y3, v.lvs_y2, v.tick_delta) * 1;",
+							"v.last_lvs_x_tick = v.lvs_x_tick;v.lvs_x_tick = math.round(q.life_time * 20 - 0.5);(v.lvs_x_tick != v.last_lvs_x_tick) ? {   v.lvs_x10 = v.lvs_x9;   v.lvs_x9 = v.lvs_x8;   v.lvs_x8 = v.lvs_x7;   v.lvs_x7 = v.lvs_x6;   v.lvs_x6 = v.lvs_x5;   v.lvs_x5 = v.lvs_x4;   v.lvs_x4 = v.lvs_x3;   v.lvs_x3 = v.lvs_x2;   v.lvs_x2 = v.lvs_x1;   v.lvs_x1 = v.lvs_x0;   v.lvs_x0 = c.lvs_x;} : 0;v.last_lvs_y_tick = v.lvs_y_tick;v.lvs_y_tick = math.round(q.life_time * 20 - 0.5);(v.lvs_y_tick != v.last_lvs_y_tick) ? {   v.lvs_y10 = v.lvs_y9;   v.lvs_y9 = v.lvs_y8;   v.lvs_y8 = v.lvs_y7;   v.lvs_y7 = v.lvs_y6;   v.lvs_y6 = v.lvs_y5;   v.lvs_y5 = v.lvs_y4;   v.lvs_y4 = v.lvs_y3;   v.lvs_y3 = v.lvs_y2;   v.lvs_y2 = v.lvs_y1;   v.lvs_y1 = v.lvs_y0;   v.lvs_y0 = c.lvs_y;} : 0;v.last_lvs_z_tick = v.lvs_z_tick;v.lvs_z_tick = math.round(q.life_time * 20 - 0.5);(v.lvs_z_tick != v.last_lvs_z_tick) ? {   v.lvs_z10 = v.lvs_z9;   v.lvs_z9 = v.lvs_z8;   v.lvs_z8 = v.lvs_z7;   v.lvs_z7 = v.lvs_z6;   v.lvs_z6 = v.lvs_z5;   v.lvs_z5 = v.lvs_z4;   v.lvs_z4 = v.lvs_z3;   v.lvs_z3 = v.lvs_z2;   v.lvs_z2 = v.lvs_z1;   v.lvs_z1 = v.lvs_z0;   v.lvs_z0 = c.lvs_z;} : 0;v.second_delta = math.mod(q.life_time, 1);v.tick_delta = math.mod(q.life_time * 20, 1);v.z_jerk = (  math.abs(math.lerp(v.lvs_z1, v.lvs_z0, v.tick_delta))  - math.abs(math.lerp(v.lvs_z10, v.lvs_z9, v.tick_delta)));readout.z_jerk = v.z_jerk;v.is_moving = (q.ground_speed > 0.25);v.duration = 1.0;(q.life_time >= v.end) ? {  v.prev = v.next;  v.next = v.is_moving;  (v.prev == v.next) ? {    v.end = q.life_time;  } : {    v.start = v.end;    v.end = q.life_time + v.duration;  };} : 0;v.progress = (q.life_time - v.start) / (v.end - v.start);v.easing = -(math.cos(180 * v.progress) - 1) / 2;v.is_moving_smoothed = math.lerp(v.prev, v.next, v.easing);",
+							0
+						]
+					}
+				}
+			}
+		},
+		"main": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"vector": [
+							0,
+							"v.idle = 0;v.moving = math.cos(q.life_time * 180) * 30 - 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"-math.sin(q.life_time * 180) * 12 - v.wing_y_jerk"
+						]
+					}
+				},
+				"bone6": {
+					"rotation": {
+						"vector": [
+							"v.idle = 0;v.moving = -math.cos(q.life_time * 180) * 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"math.cos(q.life_time * 180) * 12.25",
+							"v.idle = math.cos(q.life_time * 180) * 12.25 - 22.5;v.moving = math.cos(q.life_time * 180) * 45 - 45;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) + v.wing_y_jerk;"
+						]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": [
+							"v.idle = 0;v.moving = -math.cos(q.life_time * 180) * 16;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"v.idle = 0;v.moving = math.cos(q.life_time * 180) * 12.25;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"v.idle = math.sin(q.life_time * 180) * 12.5 + 22.5;v.moving = math.sin(q.life_time * 180) * 22.5 + 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) - v.wing_mid_y_jerk;"
+						]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"vector": [
+							0,
+							0,
+							"v.idle = math.sin(q.life_time * 180) * 12.5 - 22.5;v.moving = math.sin(q.life_time * 180) * 22.5 - 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) - v.wing_tip_y_jerk;"
+						]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": [
+							0,
+							0,
+							"v.idle = math.sin(q.life_time * 180) * 12.5 - 22.5;v.moving = math.sin(q.life_time * 180) * 30;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) - v.wing_tip_y_jerk;"
+						]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [
+							0,
+							0,
+							"v.idle = math.sin(q.life_time * 180) * 12.5 - 22.5;v.moving = math.sin(q.life_time * 180) * 45 - 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) - v.wing_tip_y_jerk;"
+						]
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"vector": [
+							0,
+							"v.idle = 0;v.moving = -math.cos(q.life_time * 180) * 30 + 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"math.sin(q.life_time * 180) * 12 + v.wing_y_jerk"
+						]
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"vector": [
+							"v.idle = 0;v.moving = -math.cos(q.life_time * 180) * 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"-math.cos(q.life_time * 180) * 12.25",
+							"v.idle = -math.cos(q.life_time * 180) * 12.25 + 22.5;v.moving = -math.cos(q.life_time * 180) * 45 + 45;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) - v.wing_y_jerk;"
+						]
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"vector": [
+							"v.idle = 0;v.moving = -math.cos(q.life_time * 180) * 16;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"v.idle = 0;v.moving = -math.cos(q.life_time * 180) * 12.25;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed);",
+							"v.idle = -math.sin(q.life_time * 180) * 12.5 - 22.5;v.moving = -math.sin(q.life_time * 180) * 22.5 - 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) + v.wing_mid_y_jerk;"
+						]
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"vector": [
+							0,
+							0,
+							"v.idle = -math.sin(q.life_time * 180) * 12.5 + 22.5;v.moving = -math.sin(q.life_time * 180) * 22.5 + 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) + v.wing_tip_y_jerk;"
+						]
+					}
+				},
+				"bone11": {
+					"rotation": {
+						"vector": [
+							0,
+							0,
+							"v.idle = -math.sin(q.life_time * 180) * 12.5 + 22.5;v.moving = -math.sin(q.life_time * 180) * 30;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) + v.wing_tip_y_jerk;"
+						]
+					}
+				},
+				"bone12": {
+					"rotation": {
+						"vector": [
+							0,
+							0,
+							"v.idle = -math.sin(q.life_time * 180) * 12.5 + 22.5;v.moving = -math.sin(q.life_time * 180) * 45 + 22.5;math.lerp(math.lerp(v.idle, v.moving, v.is_moving_smoothed), v.moving, c.is_flying_smoothed) + v.wing_tip_y_jerk;"
+						]
+					}
+				},
+				"root": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"elytra": {
+			"loop": true,
+			"bones": {
+				"bone7": {
+					"rotation": {
+						"vector": [0, 0, 45]
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"vector": [0, 0, -22.5]
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"vector": [0, "-q.head_y_rotation", 0]
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"vector": [0, "lunar.speed_vibration(0.05)", "lunar.speed_vibration(0.025)"]
+					}
+				},
+				"bone11": {
+					"rotation": {
+						"vector": [0, "lunar.speed_vibration(0.05)", "-22.5 + lunar.speed_vibration(0.025)"]
+					}
+				},
+				"bone12": {
+					"rotation": {
+						"vector": [0, "lunar.speed_vibration(0.05)", "-22.5 + lunar.speed_vibration(0.025)"]
+					}
+				},
+				"bone": {
+					"rotation": {
+						"vector": [0, 0, -45]
+					}
+				},
+				"bone6": {
+					"rotation": {
+						"vector": [0, 0, 22.5]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": [0, "-q.head_y_rotation", 0]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"vector": [0, "lunar.speed_vibration(0.05)", "lunar.speed_vibration(0.025)"]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": [0, "lunar.speed_vibration(0.05)", "22.5 + lunar.speed_vibration(0.025)"]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [0, "lunar.speed_vibration(0.05)", "22.5 + lunar.speed_vibration(0.025)"]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

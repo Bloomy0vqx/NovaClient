@@ -1,0 +1,625 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"main": {
+			"loop": true,
+			"bones": {
+				"heartstack_1": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_2": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(3.3+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_3": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(7.2+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_4": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(11.1+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_5": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(15+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_6": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(18.9+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_7": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(22.8+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_8": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(26.7+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_9": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_10": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(3.3+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_11": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(7.2+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_12": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(11.1+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_13": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(15+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_14": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(18.9+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_15": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(22.8+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_16": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(26.7+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				}
+			}
+		},
+		"horizontal": {
+			"loop": true,
+			"animation_length": 8,
+			"bones": {
+				"heartstack_1": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_2": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(3.3+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_3": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(7.2+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_4": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(11.1+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_5": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(15+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_6": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(18.9+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_7": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(22.8+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_8": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(26.7+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"root": {
+					"rotation": {
+						"vector": [90, 0, 0]
+					},
+					"position": {
+						"vector": [0, 16, 16]
+					}
+				},
+				"heartstack_9": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_10": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(3.3+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_11": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(7.2+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_12": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(11.1+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_13": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(15+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_14": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(18.9+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_15": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(22.8+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_16": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(26.7+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				}
+			}
+		},
+		"gui": {
+			"loop": true,
+			"animation_length": 181.35,
+			"bones": {
+				"heartstack_1": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_2": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(3.3+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_3": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(7.2+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_4": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(11.1+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_5": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(15+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_6": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(18.9+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_7": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(22.8+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_8": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(26.7+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"root": {
+					"position": {
+						"vector": [-5, 20, 0]
+					},
+					"scale": {
+						"vector": [0.35, 0.35, 0.35]
+					}
+				},
+				"heartstack_9": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_10": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(3.3+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.125+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_11": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(7.2+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.25+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_12": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(11.1+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.375+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_13": {
+					"position": {
+						"vector": ["math.sin(q.life_time*200)*2", "math.mod(15+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.5+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_14": {
+					"position": {
+						"vector": ["-math.cos(q.life_time*200)*1", "math.mod(18.9+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.625+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_15": {
+					"position": {
+						"vector": ["-math.sin(q.life_time*200)*2", "math.mod(22.8+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.75+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack_16": {
+					"position": {
+						"vector": ["math.cos(q.life_time*200)*1", "math.mod(26.7+q.life_time*10,30)", 0]
+					},
+					"scale": {
+						"vector": [
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1",
+							"math.sin(math.mod(0.875+q.life_time*0.333333,1)*180)*1"
+						]
+					}
+				},
+				"heartstack": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"heartstack2": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,0 +1,67 @@
+{
+  "type": "pet",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/pets/general/summer_croc/summer_croc.geo.json",
+  "texture": "lunar:cosmetics/models/gek/pets/general/summer_croc/summer_croc.webp",
+  "animation": "lunar:cosmetics/models/gek/pets/general/summer_croc/summer_croc.anim.json",
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "gui_controller",
+        "states": [
+          {
+            "anim": "gui",
+            "plays_when": "q.is_in_gui"
+          }
+        ]
+      },
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "8",
+        "states": [
+          {
+            "anim": "elytra",
+            "plays_when": "q.is_elytra_flying",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "main_swimming",
+            "plays_when": "q.is_swimming",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "main_underwater",
+            "plays_when": "q.distance_from_surface>=1",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "afk",
+            "plays_when": "(c.afk_timer >= 10) && !q.is_in_gui && !q.is_in_preview_model",
+            "transition_easing": "easeInOutSine",
+            "transition_ticks": "16"
+          },
+          {
+            "anim": "main_fast",
+            "plays_when": "q.is_running",
+            "transition_easing": "easeInOutSine"
+          },
+          {
+            "anim": "main",
+            "plays_when": "1",
+            "transition_easing": "easeInOutSine"
+          }
+        ]
+      },
+      {
+        "name": "blinking_controller",
+        "states": [
+          {
+            "anim": "blink",
+            "plays_when": "(c.afk_timer <= 10) && lunar.interval(10, 10)"
+          }
+        ]
+      }
+    ]
+  }
+}

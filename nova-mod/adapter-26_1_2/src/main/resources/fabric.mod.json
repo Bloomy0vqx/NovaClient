@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "novaclient",
+  "version": "1.0.0",
+  "name": "Nova Client",
+  "description": "Nova Client mod for Minecraft 26.1.2 with Fabric.",
+  "authors": ["Nova Team"],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.novaclient.adapter.Adapter26_1_2Fabric"
+    ]
+  },
+  "mixins": [
+    "novaclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=26.1.2",
+    "java": ">=21"
+  }
+}

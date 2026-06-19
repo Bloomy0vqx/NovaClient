@@ -1,0 +1,92 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 0.9167,
+			"bones": {
+				"Head": {
+					"rotation": {
+						"vector": ["math.sin(50-q.anim_time*400)*0.5", 0, 0]
+					}
+				},
+				"Tail": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*400)*4", "math.sin(100-q.anim_time*400)", 0]
+					}
+				},
+				"Leg_front": {
+					"rotation": {
+						"vector": [-18.6435, "34.0591+math.sin(q.anim_time*400)*30", "-15.0892-math.sin(100-q.anim_time*400)*10 "]
+					}
+				},
+				"Bottom": {
+					"rotation": {
+						"vector": [10, "0+math.sin(q.anim_time*400)*10", 0]
+					}
+				},
+				"Leg_Middle": {
+					"rotation": {
+						"vector": [0, "math.sin(60+q.anim_time*400)*30", "-25-math.sin(40-q.anim_time*400)*10"]
+					}
+				},
+				"Bottom2": {
+					"rotation": {
+						"vector": [0, "0+math.sin(q.anim_time*400)*10", 15]
+					}
+				},
+				"Leg_back": {
+					"rotation": {
+						"vector": [13.14951, "-35.1233+math.sin(120+q.anim_time*400)*30", "-27.4155+math.sin(20+q.anim_time*400)*10"]
+					}
+				},
+				"Bottom3": {
+					"rotation": {
+						"vector": [0, "-12.5+math.sin(q.anim_time*400)*10", 10]
+					}
+				},
+				"Head2": {
+					"rotation": {
+						"vector": ["math.sin(50-q.anim_time*400)*0.5", 0, 0]
+					}
+				},
+				"Tail2": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*400)*4", "math.sin(100-q.anim_time*400)", 0]
+					}
+				},
+				"Leg_front2": {
+					"rotation": {
+						"vector": [-18.6435, "-34.0591+math.sin(q.anim_time*400)*30", "15.0892-math.sin(100-q.anim_time*400)*10 "]
+					}
+				},
+				"Bottom4": {
+					"rotation": {
+						"vector": [10, "0+math.sin(q.anim_time*400)*10", 0]
+					}
+				},
+				"Leg_Middle2": {
+					"rotation": {
+						"vector": [0, "math.sin(60+q.anim_time*400)*30", "25-math.sin(40-q.anim_time*400)*10"]
+					}
+				},
+				"Bottom5": {
+					"rotation": {
+						"vector": [0, "0-math.sin(q.anim_time*400)*10", -15]
+					}
+				},
+				"Leg_back2": {
+					"rotation": {
+						"vector": [13.1495, "35.1233+math.sin(120+q.anim_time*400)*30", "27.4155+math.sin(20+q.anim_time*400)*10"]
+					}
+				},
+				"Bottom6": {
+					"rotation": {
+						"vector": [0, "12.5+math.sin(q.anim_time*400)*10", -10]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

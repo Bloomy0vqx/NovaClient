@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Premain-Class: com.nova.patcher.NovaAgent
+Agent-Class: com.nova.patcher.NovaAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true

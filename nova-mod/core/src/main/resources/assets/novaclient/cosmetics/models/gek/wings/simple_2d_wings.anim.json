@@ -1,0 +1,56 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"main": {
+			"loop": true,
+			"bones": {
+				"left": {
+					"rotation": {
+						"vector": [
+							"v.val = c.y_velocity_smoothed;v.coef = 2;v.range = 22.5;((v.range * 2) / (1 + math.pow(v.coef, -v.val)) - v.range)+ 12.25 - 12.25 * c.normalized_ground_speed;",
+							"v.x = (math.sin(q.life_time * 128) * 22.5 - 22.5);(v.x - v.x * c.normalized_ground_speed)+ (lunar.movewave_sin(128, 22.5, 0) - (22.5 * c.normalized_ground_speed));",
+							0
+						]
+					}
+				},
+				"right": {
+					"rotation": {
+						"vector": [
+							"v.val = c.y_velocity_smoothed;v.coef = 2;v.range = 22.5;((v.range * 2) / (1 + math.pow(v.coef, -v.val)) - v.range)+ 12.25 - 12.25 * c.normalized_ground_speed;",
+							"v.x = (-math.sin(q.life_time * 128) * 22.5 + 22.5);(v.x - v.x * c.normalized_ground_speed)+ (-lunar.movewave_sin(128, 22.5, 0) + (22.5 * c.normalized_ground_speed));",
+							0
+						]
+					}
+				},
+				"scale_origin": {
+					"scale": {
+						"vector": ["math.clamp((option.size ?? 5) / 5, 0, 2)", "math.clamp((option.size ?? 5) / 5, 0, 2)", "math.clamp((option.size ?? 5) / 5, 0, 2)"]
+					}
+				}
+			}
+		},
+		"flying": {
+			"loop": true,
+			"bones": {
+				"left": {
+					"rotation": {
+						"vector": [
+							"v.val = c.y_velocity_smoothed;v.coef = 2;v.range = 12.25;((v.range * 2) / (1 + math.pow(v.coef, -v.val)) - v.range);",
+							"v.x = (math.sin(q.life_time * 512) * 22.5 - 22.5);(v.x - v.x * c.normalized_ground_speed)+ (lunar.movewave_sin(128, 22.5, 0) - (22.5 * c.normalized_ground_speed));",
+							0
+						]
+					}
+				},
+				"right": {
+					"rotation": {
+						"vector": [
+							"v.val = c.y_velocity_smoothed;v.coef = 2;v.range = 12.25;((v.range * 2) / (1 + math.pow(v.coef, -v.val)) - v.range);",
+							"v.x = (-math.sin(q.life_time * 512) * 22.5 + 22.5);(v.x - v.x * c.normalized_ground_speed)+ (-lunar.movewave_sin(128, 22.5, 0) + (22.5 * c.normalized_ground_speed));",
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

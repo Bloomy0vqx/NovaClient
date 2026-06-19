@@ -1,0 +1,43 @@
+{
+  "type": "pet",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/pets/general/ghost_pet_black/ghost_pet_black.geo.json",
+  "texture": "lunar:cosmetics/models/gek/pets/general/ghost_pet_black/ghost_pet_black.webp",
+  "animation": "lunar:cosmetics/models/gek/pets/general/ghost_pet_black/ghost_pet_black.anim.json",
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "16",
+        "states": [
+          {
+            "anim": "sword_mirage",
+            "plays_when": "(c.afk_timer >= 10) && !q.is_in_gui && !q.is_in_preview_model",
+            "transition_easing": "easeInOutCubic",
+            "transition_ticks": "16"
+          },
+          {
+            "anim": "main",
+            "plays_when": "1",
+            "transition_easing": "easeInOutCubic",
+            "transition_ticks": "16"
+          }
+        ]
+      },
+      {
+        "name": "spinning_controller",
+        "states": [
+          {
+            "anim": "spin",
+            "plays_when": "lunar.interval(6, 1) && !(c.afk_timer > 10)"
+          },
+          {
+            "anim": "spin",
+            "plays_when": "lunar.interval(4.5, 1) && !(c.afk_timer > 10)"
+          }
+        ]
+      }
+    ]
+  }
+}

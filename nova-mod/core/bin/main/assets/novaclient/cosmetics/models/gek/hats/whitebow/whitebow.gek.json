@@ -1,0 +1,49 @@
+{
+  "type": "hat",
+  "attached_bone": "HEAD",
+  "model": "lunar:cosmetics/models/gek/hats/whitebow/whitebow.geo.json",
+  "texture": "lunar:cosmetics/models/gek/hats/whitebow/whitebow.webp",
+  "animation": "lunar:cosmetics/models/gek/hats/whitebow/whitebow.anim.json",
+  "cosmetic_options": [
+    {
+      "type": "float",
+      "id": "height",
+      "molang_query": "option.height",
+      "default": 5,
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "8",
+        "states": [
+          {
+            "anim": "height_option",
+            "plays_when": "1"
+          }
+        ]
+      }
+    ]
+  },
+  "transformations": [
+    {
+      "transformType": "translate",
+      "values": {
+        "player": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "helmet": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.05
+        }
+      }
+    }
+  ]
+}

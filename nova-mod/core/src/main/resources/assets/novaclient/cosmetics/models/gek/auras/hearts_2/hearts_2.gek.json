@@ -1,0 +1,36 @@
+{
+  "type": "pet",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/auras/hearts_2/hearts_2.geo.json",
+  "texture": "lunar:cosmetics/models/gek/auras/hearts_2/hearts_2.webp",
+  "animation": "lunar:cosmetics/models/gek/auras/hearts_2/hearts_2.anim.json",
+  "state_machine": {
+    "name": "molang",
+    "controllers": [
+      {
+        "name": "main_controller",
+        "default_transition_ticks": "8",
+        "states": [
+          {
+            "anim": "horizontal",
+            "plays_when": "q.is_swimming || q.is_elytra_flying"
+          },
+          {
+            "anim": "main",
+            "plays_when": "!q.is_swimming || !q.is_elytra_flying"
+          }
+        ]
+      },
+      {
+        "name": "gui_controller",
+        "transition_ticks": "8",
+        "states": [
+          {
+            "anim": "gui",
+            "plays_when": "q.is_in_gui"
+          }
+        ]
+      }
+    ]
+  }
+}

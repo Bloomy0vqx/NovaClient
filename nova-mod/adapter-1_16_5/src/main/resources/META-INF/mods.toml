@@ -1,0 +1,9 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="novaclient"
+version="1.0.0"
+displayName="Nova Client"
+description='Client-side mod for Minecraft 1.16.5 with custom UI.'

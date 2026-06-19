@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "novaclient",
+  "version": "1.0.0",
+  "name": "Nova Client",
+  "description": "Client-side mod for Minecraft 1.21.x with a mod menu and 49+ mods.",
+  "authors": [
+    "Nova Team"
+  ],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.novaclient.NovaClient"
+    ]
+  },
+  "mixins": [
+    "novaclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": ">=1.21",
+    "java": ">=21"
+  }
+}

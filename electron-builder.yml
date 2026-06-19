@@ -1,0 +1,46 @@
+appId: com.nova.client
+productName: Nova Client
+directories:
+  buildResources: resources
+  output: release74
+files:
+  - dist
+  - dist-electron
+  - package.json
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: resources/icon.png
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  icon: resources/icon.png
+  category: public.app-category.games
+linux:
+  target:
+    - target: dir
+      arch:
+        - x64
+  icon: resources/icon.png
+  category: Game
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+extraResources:
+  - from: proxy
+    to: proxy
+    filter:
+      - "**/*"
+      - "!node_modules"
+      - "!src"
+  - from: resources/novaclientmod
+    to: novaclientmod
+    filter:
+      - "**/*"

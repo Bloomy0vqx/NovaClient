@@ -1,0 +1,12 @@
+{
+  "type": "backpack",
+  "attached_bone": "SHOULDER",
+  "model": "lunar:cosmetics/models/gek/backpacks/turkey_tail/turkey_tail.geo.json",
+  "texture": "lunar:cosmetics/models/gek/backpacks/turkey_tail/turkey_tail.webp",
+  "animation": "lunar:cosmetics/models/gek/backpacks/turkey_tail/turkey_tail.anim.json",
+  "state_machine": {
+    "name": "single",
+    "transition_tick_length": 10,
+    "anim": "turkey_tail_anim"
+  }
+}
