@@ -24,7 +24,7 @@ export default function PartnershipsPage() {
                 cursor: 'pointer',
                 transition: 'transform 0.2s, box-shadow 0.2s',
               }}
-              onClick={() => window.open(partnership.website, '_blank')}
+              onClick={() => window.open(partnership.discord, '_blank')}
             >
               {partnership.featured && (
                 <div style={{
